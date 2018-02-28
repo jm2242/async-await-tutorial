@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux"
 import { loadBitcoinData } from "./action-creators"
+import RaisedButton from 'material-ui/RaisedButton';
 
 class DashboardContainer extends Component {
 
@@ -17,7 +18,10 @@ class DashboardContainer extends Component {
         return (
             <div className="container">
                 <div className="flex">
-                    Hello
+                    <RaisedButton
+                        label="Get Bitcoin Prices"
+                        onClick={this.handleLoad}
+                        />
                 </div>
             </div>
 
